@@ -8,15 +8,15 @@ Basic Setup
 
 The following instructions assume that you have set up your instance with a GCEL image.  You may need to make adjustments for other images.
 
-Update packages (optional):  
+**Update packages (optional):**  
 
     sudo apt-get update && sudo apt-get upgrade
 
-Install Required Dependencies:
+**Install required dependencies:**
 
     sudo apt-get install gcc g++
 
-Download & Install ZeroMQ  
+**Download & Install ZeroMQ**  
 *Check for the latest software [here](http://www.zeromq.org/intro:get-the-software).*  
 The following instructions are based on ZeroMQ 3.2.2:
 
@@ -37,7 +37,7 @@ The quick_setup.sh script can be used to automate the above steps.  To use, you 
 
 *Note that the script does not run apt-get update/upgrade*
 
-Usage:
+**Usage:**
 
     gcutil --project <project> ssh <instance-name> < quick_setup.sh
 
@@ -50,10 +50,11 @@ Detailed instructions can be found [here](http://www.zeromq.org/results:perf-how
 * Note the network IP (internal) addresses of the instances
 
     gcutil --project <project> getinstance <instance-name> | grep " ip"
-* SSH to each of the instances
-* Test scripts are found in ~/zeromq-3.2.2/perf
 
-Latency Test:  
+* SSH to each of the instances
+* Test scripts are found in `~/zeromq-3.2.2/perf`
+
+**Latency Test:**  
 
     # On instance 1
     local_lat tcp://eth0:5555 1 10
@@ -61,7 +62,7 @@ Latency Test:
     # On instance 2
     remote_lat tcp://<ip-of-instance-1>:5555 1 10
 
-Throughput Test:  
+**Throughput Test:**  
 
     # On instance 1
     local_thr tcp://eth0:5555 1 10
