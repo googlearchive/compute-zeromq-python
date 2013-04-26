@@ -34,18 +34,21 @@ Setup Script
 The quick_setup.sh script can be used to automate the above steps.  To use, you need:
 * [gcutil](https://developers.google.com/compute/docs/gcutil/) installed on your system and in your path.
 * One or more instances with a GCEL image installed on them.
+
 *Note that the script does not run apt-get update/upgrade*
 
 Usage:
+
     gcutil --project <project> ssh <instance-name> < quick_setup.sh
 
 Running Basic Tests
 -------------------
 
-Detailed instructions can be found [here](http://www.zeromq.org/results:perf-howto)
+Detailed instructions can be found [here](http://www.zeromq.org/results:perf-howto).
 
 * Install ZeroMQ on 2 instances on the same network
 * Note the network IP (internal) addresses of the instances
+
     gcutil --project <project> getinstance <instance-name> | grep " ip"
 * SSH to each of the instances
 * Test scripts are found in ~/zeromq-3.2.2/perf
