@@ -69,3 +69,10 @@ Detailed instructions can be found [here](http://www.zeromq.org/results:perf-how
     remote_thr tcp://<ip-of-instance-1>:5555 1 10
 
 *Note that the "1 10" values can be changed to whatever you like.  The first number is the message size in bytes.  The second number is the number of messages/roundtrips that are run.  Low numbers are used here to minimize unnecessary resource usage.*
+
+Additional Information
+----------------------
+
+Further instructions for using ZeroMQ, with code examples can be found on the ZeroMQ website [here](http://www.zeromq.org/intro:read-the-manual).
+
+The above setup is based on two GCE instances on the same network.  Communication to/from outside of the network will require additional configuration of Networks and Firewalls. Documentation for GCE Networking can be found [here](https://developers.google.com/compute/docs/networking).
