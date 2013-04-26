@@ -48,9 +48,7 @@ Detailed instructions can be found [here](http://www.zeromq.org/results:perf-how
 
 * Install ZeroMQ on 2 instances on the same network
 * Note the network IP (internal) addresses of the instances
-
-    gcutil --project <project> getinstance <instance-name> | grep " ip"
-
+  `gcutil --project <project> getinstance <instance-name> | grep " ip"`
 * SSH to each of the instances
 * Test scripts are found in `~/zeromq-3.2.2/perf`
 
