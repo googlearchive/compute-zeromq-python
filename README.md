@@ -9,7 +9,7 @@ Basic Setup
 The following instructions assume that you have set up your instance
 with a GCEL image.  You may need to make adjustments for other images.
 
-**Update packages (optional):**  
+**Update packages (optional):**
 
     sudo apt-get update && sudo apt-get upgrade
 
@@ -57,7 +57,7 @@ Detailed instructions can be found
 * SSH to each of the instances
 * Test scripts are found in `~/zeromq-3.2.2/perf`
 
-**Latency Test:**  
+**Latency Test:**
 
     # On instance 1
     local_lat tcp://eth0:5555 1 10
@@ -65,7 +65,7 @@ Detailed instructions can be found
     # On instance 2
     remote_lat tcp://<ip-of-instance-1>:5555 1 10
 
-**Throughput Test:**  
+**Throughput Test:**
 
     # On instance 1
     local_thr tcp://eth0:5555 1 10
