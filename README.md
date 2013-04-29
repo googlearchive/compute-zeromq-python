@@ -6,7 +6,8 @@ Instructions for using ZeroMQ on Google Compute Engine
 Basic Setup
 -----------
 
-The following instructions assume that you have set up your instance with a GCEL image.  You may need to make adjustments for other images.
+The following instructions assume that you have set up your instance
+with a GCEL image.  You may need to make adjustments for other images.
 
 **Update packages (optional):**  
 
@@ -17,7 +18,8 @@ The following instructions assume that you have set up your instance with a GCEL
     sudo apt-get install gcc g++
 
 **Download & Install ZeroMQ**  
-*Check for the latest software [here](http://www.zeromq.org/intro:get-the-software).*  
+*Check for the latest software
+[here](http://www.zeromq.org/intro:get-the-software).*  
 The following instructions are based on ZeroMQ 3.2.2:
 
     wget http://download.zeromq.org/zeromq-3.2.2.tar.gz
@@ -31,8 +33,10 @@ The following instructions are based on ZeroMQ 3.2.2:
 Setup Script
 ------------
 
-The quick_setup.sh script can be used to automate the above steps.  To use, you need:
-* [gcutil](https://developers.google.com/compute/docs/gcutil/) installed on your system and in your path.
+The quick_setup.sh script can be used to automate the above steps.
+To use, you need:
+* [gcutil](https://developers.google.com/compute/docs/gcutil/) installed
+  on your system and in your path.
 * One or more instances with a GCEL image installed on them.
 
 *Note that the script does not run apt-get update/upgrade*
@@ -44,7 +48,8 @@ The quick_setup.sh script can be used to automate the above steps.  To use, you 
 Running Basic Tests
 -------------------
 
-Detailed instructions can be found [here](http://www.zeromq.org/results:perf-howto).
+Detailed instructions can be found
+[here](http://www.zeromq.org/results:perf-howto).
 
 * Install ZeroMQ on 2 instances on the same network
 * Note the network IP (internal) addresses of the instances
@@ -68,11 +73,18 @@ Detailed instructions can be found [here](http://www.zeromq.org/results:perf-how
     # On instance 2
     remote_thr tcp://<ip-of-instance-1>:5555 1 10
 
-*Note that the "1 10" values can be changed to whatever you like.  The first number is the message size in bytes.  The second number is the number of messages/roundtrips that are run.  Low numbers are used here to minimize unnecessary resource usage.*
+*Note that the "1 10" values can be changed to whatever you like.
+The first number is the message size in bytes.  The second number is
+the number of messages/roundtrips that are run.  Low numbers are used
+here to minimize unnecessary resource usage.*
 
 Additional Information
 ----------------------
 
-Further instructions for using ZeroMQ, with code examples can be found on the ZeroMQ website [here](http://www.zeromq.org/intro:read-the-manual).
+Further instructions for using ZeroMQ, with code examples can be found
+on the ZeroMQ website [here](http://www.zeromq.org/intro:read-the-manual).
 
-The above setup is based on two GCE instances on the same network.  Communication to/from outside of the network will require additional configuration of Networks and Firewalls. Documentation for GCE Networking can be found [here](https://developers.google.com/compute/docs/networking).
+The above setup is based on two GCE instances on the same network.
+Communication to/from outside of the network will require additional
+configuration of Networks and Firewalls. Documentation for GCE Networking
+can be found [here](https://developers.google.com/compute/docs/networking).
